@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,*::after,*::before{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$color-primary: #070068;
+$color-secondary: #009A84;
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section{
+    min-height: 450px;
+    width: 100vw;
+    cursor: url('/img/rocket.png') , auto;
+}
+
+nav {
+    box-shadow: 0px 1px 30px #07006838;
+    width: 100%;
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+}
+
+.col-md-6{
+    min-height: 500px;
+    align-items: center;
+}
+
+.hero {
+    margin-top:20px;
+    position: relative;
+    // background: url('/img/herobg.jpg') no-repeat center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .hero-wave{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+    }
+}
+
+.info{
+    .sub-title {
+        font-size: 1.1rem;
+        color: #959595;
+        font-weight: semibold;
+    }
+    h1{
+        font-size: 3rem;
+        color: $color-primary;
+    }
+    .lead{
+        font-size: 1rem;
+    }
+    a{
+        background-color: $color-secondary;
+        font-weight: bold;
+        color: #fff;
+        border: 2px solid $color-secondary;
+
+
+        &:hover{
+            background-color: transparent;
+            color: $color-secondary;
+            border: 2px solid $color-secondary;
+        }
+    }
+}
+
+.btn-primary{
+    background-color: $color-secondary;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid $color-secondary;
+
+
+    &:hover{
+        background-color: transparent;
+        color: $color-secondary;
+        border: 2px solid $color-secondary;
+    }
+}
+
+
+.about {
+    background-color: $color-primary;
+    color: #fff;
+
+    .col-md-6{
+        min-height: max-content;
+    }
+
+    .aboutUs-video{
+        border-radius: .8rem;
+    }
+    .abtvsfh {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    .abtvsfp{
+            line-height: 28px;
+    }
+}
+
+.partner{
+    h1{
+        font-size: 3rem;
+        // color: $color-primary;
+    }
+    .prtwave{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+        min-height: 500px;
+    }
+    .col-md-6{
+        min-height: max-content;
+    }
+}
+
+.contact {
+    background-color: $color-primary;
+    color: #fff;
+    padding: 1.5rem 0;
+
+    .social-icons a {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+}
+.footer {
+    background-color: $color-secondary;
+    color: #fff;
+    padding: 20px 0;
+    min-height: 300px;
+    width: 100%;
+}
+
+footer > ul > li > .nav-link {
+    color: #fff!important;
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+#timer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    // right: 0;
+    z-index: 100;
+}
+
+
+///events Page
+
+
+.events {
+    background: url('/img/eventsbg.jpg');
+    background-color: $color-primary;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    // height: 700vh;
+    padding-bottom: 5rem;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: transparent!important;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-block: 1rem;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #fff;
+  color: #000;
+  padding: .5rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transform: rotateY( 180deg );
+
+
+  h6 {
+    font-weight: bolder;
+  }
+  p {
+    font-size: 14px;
+    width: inherit;
+    margin-top: .8rem;
+  }
+}
+
+//events bg
+
+.event1 {
+    background: url('/img/Event\ 1.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event2{
+    background: url('/img/Event\ 2.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event3{
+    background: url('/img/Event\ 3.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event4{
+    background: url('/img/Event\ 4.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event5{
+    background: url('/img/Event\ 5.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event6{
+    background: url('/img/Event\ 6.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event7{
+    background: url('/img/Event\ 7.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event8{
+    background: url('/img/Event\ 8.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event9{
+    background: url('/img/Event\ 9.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event10{
+    background: url('/img/Event\ 10.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event11{
+    background: url('/img/Event\ 11.png') no-repeat center center;
+    background-size: contain;
+}
+
+.event12{
+    background: url('/img/Event\ 12.png') no-repeat center center;
+    background-size: contain;
+}
+
+
+.front > a {
+    position: absolute;
+    bottom: 10px;
+}
+
+@media (hover: none) {
+    .front > a {
+        visibility: visible;
+    }
+}
+
+@media (hover: hover) {
+     .front > a {
+         visibility: hidden;
+     }
+}
